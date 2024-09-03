@@ -64,7 +64,7 @@ const degrees = [
 
 const About = () => {
   return (
-    <section id="about" className="snap-center container mx-auto py-20 px-6">
+    <section id="about" className="container mx-auto px-6">
       <h2 className="text-3xl font-bold text-white mb-6">About Me</h2>
       <div className="flex flex-col md:flex-row items-center mb-8">
         <img
@@ -80,7 +80,7 @@ const About = () => {
         </p>
       </div>
 
-      <h3 className="text-2xl font-bold text-white mb-4">Education</h3>
+      <h2 className="text-3xl font-bold text-white mb-6">Education</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {degrees.map((degree, index) => (
           <div

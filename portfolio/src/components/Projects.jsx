@@ -26,7 +26,7 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section id="projects" className="container mx-auto py-20 px-6">
+    <section id="projects" className="container mx-auto p-6">
       <h2 className="text-3xl font-bold text-white mb-6">Projects</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {projects.map((project, projectIndex) => (
