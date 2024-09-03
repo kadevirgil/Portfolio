@@ -7,7 +7,7 @@ export default {
       fontFamily: {
         sans: ["Inter", "system-ui"],
         serif: ["Roboto", "system-ui"],
-      }
+      },
     },
   },
   plugins: [],

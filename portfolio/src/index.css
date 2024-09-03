@@ -6,9 +6,14 @@ body {
   @apply bg-gray-900 text-gray-300 cursor-default;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @layer components {
   .primary-btn {
-    @apply mt-6 px-6 py-3 text-lg text-white rounded-lg shadow text-opacity-60 hover:scale-110 hover:shadow-xl hover:bg-slate-800 hover:text-opacity-100 transition-all duration-200 font-sans;
+    @apply mt-6 px-6 py-3 text-lg text-white rounded-lg shadow text-opacity-60;
+    @apply hover:scale-110 hover:shadow-xl hover:bg-slate-800 hover:text-opacity-100 transition-all duration-200 font-sans;
   }
   .navlink {
     @apply hover:text-sky-400 transition duration-300 active:text-sky-700;
@@ -17,7 +22,7 @@ body {
     @apply hover:text-white active:text-gray-400 transition duration-200;
   }
   .nav-btn {
-    @apply px-4 py-1 rounded-lg border-solid border-2 border-sky-400 text-sky-400 hover:bg-sky-400 active:bg-sky-700 active:border-sky-700 hover:text-inherit transition duration-200;
+    @apply px-4 py-1 rounded-lg border-solid border-2 border-sky-500 text-sky-500 hover:bg-sky-500 active:bg-sky-700 active:border-sky-700 hover:text-inherit transition duration-200;
   }
   .wsu-img {
     @apply inline w-16 h-14 mr-4 mb-2;

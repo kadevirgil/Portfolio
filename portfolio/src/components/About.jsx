@@ -1,8 +1,66 @@
 // src/components/About.jsx
 import React from "react";
-
-// Images
 import wsu from "../assets/wsu-claw.png";
+
+const degrees = [
+  {
+    school: "Weber State University",
+    major: "B.S. in Computer Science",
+    graduation: "Expected Graduation: Fall 2024",
+    gpa: "GPA: 3.59/4.00",
+    coursework: [
+      "Data Structures & Algorithms",
+      "Objects & Design",
+      "Computer Organization & Programming",
+      "Object-Oriented Programming",
+      "Calculus",
+      ".NET Frameworks",
+      "Operating Systems",
+    ],
+  },
+  {
+    school: "Weber State University",
+    major: "A.A.S. in Computer Science",
+    graduation: "Graduated: December 2023",
+    gpa: "GPA: 3.59/4.00",
+    coursework: [
+      "Data Structures & Algorithms",
+      "Objects & Design",
+      "Computer Organization & Programming",
+      "Combinatorics",
+      "Object-Oriented Programming",
+      "Calculus",
+      "Computer Architecture",
+    ],
+  },
+  {
+    school: "Weber State University",
+    major: "Certificate of Proficiency in Programming Essentials",
+    graduation: "Graduated: December 2023",
+    gpa: "GPA: N/A",
+    coursework: [
+      "Core programming courses",
+      "Data Structures & Algorithms",
+      "Introduction to CS",
+      "Front-End Development",
+      "HTML/CSS",
+    ],
+  },
+  {
+    school: "Weber State University",
+    major: "A.S. in General Studies",
+    graduation: "Graduated: April 2022",
+    gpa: "GPA: 3.59/4.00",
+    coursework: [
+      "Mathematics",
+      "History",
+      "English",
+      "Political Science",
+      "Health",
+      "Science",
+    ],
+  },
+];
 
 const About = () => {
   return (
@@ -23,105 +81,41 @@ const About = () => {
       </div>
 
       <h3 className="text-2xl font-bold text-white mb-4">Education</h3>
-      <div className="ed-container">
-        <div>
-          <h4 className="ed-heading">
-            <img
-              src={wsu}
-              alt="Weber State University Claw Logo"
-              className="wsu-img"
-            />
-            <span className="text-indigo-500">Weber State University</span>,
-            Ogden, Utah
-          </h4>
-          <p>
-            <span className="ed-major">B.S. in Computer Science</span>
-            <br />
-            <span className="italic">Expected Graduation: Fall 2024</span>
-            <br />
-            <span className="text-gray-300">GPA: 3.59/4.00</span>
-          </p>
-          <p className="mt-2">
-            <span className="font-semibold">Related Coursework:</span> Data
-            Structures & Algorithms, Objects & Design, Computer Organization &
-            Programming, Object-Oriented Programming, Calculus, .NET Frameworks,
-            Operating Systems
-          </p>
-        </div>
-
-        <div>
-          <h4 className="ed-heading">
-            <img
-              src={wsu}
-              alt="Weber State University Claw Logo"
-              className="wsu-img"
-            />
-            <span className="text-indigo-500">Weber State University</span>,
-            Ogden, Utah
-          </h4>
-          <p>
-            <span className="ed-major">A.A.S. in Computer Science</span>
-            <br />
-            <span className="italic">Graduated: December 2023</span>
-            <br />
-            <span className="text-gray-300">GPA: 3.59/4.00</span>
-          </p>
-          <p className="mt-2">
-            <span className="font-semibold">Related Coursework:</span> Data
-            Structures & Algorithms, Objects & Design, Computer Organization &
-            Programming, Combinatorics, Object-Oriented Programming, Calculus,
-            Computer Architecture
-          </p>
-        </div>
-
-        <div>
-          <h4 className="ed-heading">
-            <img
-              src={wsu}
-              alt="Weber State University Claw Logo"
-              className="wsu-img"
-            />
-            <span className="text-indigo-500">Weber State University</span>,
-            Ogden, Utah
-          </h4>
-          <p>
-            <span className="font-semibold">
-              Certificate of Proficiency in Programming Essentials
-            </span>
-            <br />
-            <span className="italic">Graduated: December 2023</span>
-            <br />
-            <span className="text-gray-300">GPA: N/A</span>
-          </p>
-          <p className="mt-2">
-            <span className="font-semibold">Related Coursework:</span> Core
-            programming courses, Data Structures & Algorithms, Introduction to
-            CS, Front-End Development, HTML/CSS
-          </p>
-        </div>
-
-        <div>
-          <h4 className="ed-heading">
-            <img
-              src={wsu}
-              alt="Weber State University Claw Logo"
-              className="wsu-img"
-            />
-            <span className="text-indigo-500">Weber State University</span>,
-            Ogden, Utah
-          </h4>
-          <p>
-            <span className="font-semibold">A.S. in General Studies</span>
-            <br />
-            <span className="italic">Graduated: April 2022</span>
-            <br />
-            <span className="text-gray-300">GPA: 3.59/4.00</span>
-          </p>
-          <p className="mt-2">
-            <span className="font-semibold">Related Coursework:</span>{" "}
-            Mathematics, History, English, Political Science, Health, Science
-          </p>
-        </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {degrees.map((degree, index) => (
+          <div
+            key={index}
+            className="bg-gray-800 rounded-lg shadow-lg p-6 hover:shadow-2xl transition duration-300"
+          >
+            <h4 className="ed-heading mb-2">
+              <img
+                src={wsu}
+                alt={`${degree.school} Claw Logo`}
+                className="wsu-img inline-block mr-2"
+              />
+              <span className="text-indigo-500">{degree.school}</span>
+              {" "}{degree.location}
+            </h4>
+            <p className="text-gray-400">
+              <span className="ed-major">{degree.major}</span>
+              <br />
+              <span className="italic">{degree.graduation}</span>
+              <br />
+              <span className="text-gray-300">{degree.gpa}</span>
+            </p>
+            <p className="text-gray-400 mt-4">Coursework:</p>
+            <ul className="flex flex-wrap">
+              {degree.coursework && degree.coursework.map((coursework, courseworkIndex) => (
+                <li
+                  key={`${coursework}-${courseworkIndex}`}
+                  className="bg-opacity-50 bg-indigo-900 text-indigo-400 px-4 py-2 mr-2 my-2 rounded-3xl font-serif hover:bg-opacity-90 transition-all duration-200"
+                >
+                  {coursework}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
       </div>
     </section>
   );
