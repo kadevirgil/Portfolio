@@ -19,20 +19,27 @@ const projects = [
       "A full-stack banking application using React, Node.js, Express, and MongoDB.",
     image: bank,
     link: "https://github.com/kadevirgil/Portfolio/tree/main/Banking-App",
-    skills: ["React", "Node.js", "Express", "MongoDB", "Bootstrap", "React-Bootstrap"],
+    skills: [
+      "React",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Bootstrap",
+      "React-Bootstrap",
+    ],
   },
   // Add more projects as needed
 ];
 
 const Projects = () => {
   return (
-    <section id="projects" className="container mx-auto p-6">
+    <section id="projects" className="container block mx-auto p-6">
       <h2 className="text-3xl font-bold text-white mb-6">Projects</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {projects.map((project, projectIndex) => (
           <div
             key={projectIndex}
-            className="bg-gray-800 rounded-lg shadow-lg p-6 hover:shadow-2xl transition duration-300"
+            className="bg-gray-800 rounded-lg shadow-lg p-6 hover:shadow-2xl transition duration-300 slide-in"
           >
             <h3 className="text-xl font-bold text-white mb-4">
               {project.title}
@@ -49,17 +56,18 @@ const Projects = () => {
               />
             </a>
             <p className="text-gray-400 mb-4">{project.description}</p>
-            
+
             {/* Skills List */}
             <ul className="flex flex-wrap mb-4">
-              {project.skills && project.skills.map((skill, skillIndex) => (
-                <li
-                  key={`${projectIndex}-${skillIndex}`}
-                  className="bg-opacity-50 bg-sky-900 text-sky-400 px-4 py-2 mr-2 mb-2 rounded-3xl font-serif hover:bg-opacity-90 transition-all duration-200"
-                >
-                  {skill}
-                </li>
-              ))}
+              {project.skills &&
+                project.skills.map((skill, skillIndex) => (
+                  <li
+                    key={`${projectIndex}-${skillIndex}`}
+                    className="bg-opacity-50 bg-sky-900 text-sky-400 px-4 py-2 mr-2 mb-2 rounded-3xl font-serif hover:bg-opacity-90 transition-all duration-200"
+                  >
+                    {skill}
+                  </li>
+                ))}
             </ul>
 
             <a href={project.link} className="navlink mr-4" target="_blank">
