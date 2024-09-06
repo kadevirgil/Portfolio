@@ -1,34 +1,46 @@
 // src/components/Skills.jsx
 import React from "react";
 import {
-  SiJavascript,
-  SiReact,
-  SiNodedotjs,
-  SiExpress,
-  SiPython,
-  SiMongodb,
-  SiDjango,
-  SiHtml5,
-  SiCss3,
-  SiSqlite,
-  SiTailwindcss,
-  SiBootstrap,
-} from "react-icons/si";
+  JavascriptOriginal,
+  ReactOriginal,
+  NodejsOriginal,
+  ExpressOriginal,
+  MongodbOriginal,
+  PythonOriginal,
+  DjangoPlain,
+  Html5Original,
+  Css3Original,
+  SqliteOriginal,
+  TailwindcssOriginal,
+  ReactbootstrapOriginal,
+  CplusplusOriginal,
+  MysqlOriginal,
+  CsharpOriginal,
+  GitOriginal,
+  VitejsOriginal,
+  BootstrapOriginal,
+} from "devicons-react";
 
 const skills = [
-  { name: "JavaScript", icon: <SiJavascript />, color: "text-yellow-400" },
-  { name: "React", icon: <SiReact />, color: "text-sky-400" },
-  { name: "Node.js", icon: <SiNodedotjs />, color: "text-green-400" },
-  { name: "Express", icon: <SiExpress />, color: "text-black" },
-  { name: "MongoDB", icon: <SiMongodb />, color: "text-green-400" },
-  { name: "Python", icon: <SiPython />, color: "text-blue-400" },
-  { name: "Django", icon: <SiDjango />, color: "text-white-400" },
-  { name: "HTML5", icon: <SiHtml5 />, color: "text-orange-400" },
-  { name: "CSS3", icon: <SiCss3 />, color: "text-blue-400" },
-  { name: "SQLite", icon: <SiSqlite />, color: "text-blue-500" },
-  { name: "Tailwind CSS", icon: <SiTailwindcss />, color: "text-blue-400" },
-  { name: "Bootstrap", icon: <SiBootstrap />, color: "text-indigo-500" },
-  // Add more skills as needed...
+  { name: "JavaScript", icon: <JavascriptOriginal size={35} /> },
+  { name: "React", icon: <ReactOriginal size={35} /> },
+  { name: "Nodejs", icon: <NodejsOriginal size={35} /> },
+  { name: "Express", icon: <ExpressOriginal size={35} /> },
+  { name: "MongoDB", icon: <MongodbOriginal size={35} /> },
+  { name: "Python", icon: <PythonOriginal size={35} /> },
+  { name: "Django", icon: <DjangoPlain size={35} /> },
+  { name: "HTML5", icon: <Html5Original size={35} /> },
+  { name: "CSS3", icon: <Css3Original size={35} /> },
+  { name: "SQLite", icon: <SqliteOriginal size={35} /> },
+  { name: "Tailwind CSS", icon: <TailwindcssOriginal size={35} /> },
+  { name: "React-Bootstrap", icon: <ReactbootstrapOriginal size={35} /> },
+  { name: "Bootstrap", icon: <BootstrapOriginal size={35} /> },
+  { name: "C++", icon: <CplusplusOriginal size={35} /> },
+  { name: "MySQL", icon: <MysqlOriginal size={35} /> },
+  { name: "C#", icon: <CsharpOriginal size={35} /> },
+  { name: "Git", icon: <GitOriginal size={35} /> },
+  { name: "Vite", icon: <VitejsOriginal size={35} /> },
+  // Add more skills as needed
 ];
 
 const Skills = () => {
@@ -41,7 +53,7 @@ const Skills = () => {
             key={index}
             className="bg-gray-800 p-4 rounded-lg flex items-center space-x-3 hover:shadow-2xl hover:bg-slate-600 hover:scale-105 transition-all duration-200 slide-in"
           >
-            <span className={`text-2xl ${skill.color}`}>{skill.icon}</span>
+            <span>{skill.icon}</span>
             <span>{skill.name}</span>
           </li>
         ))}

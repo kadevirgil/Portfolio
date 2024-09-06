@@ -23,7 +23,7 @@ const Navbar = () => {
       } transition-all duration-300 z-50`}
     >
       <nav className="container mx-auto flex justify-around items-center scroll-smooth">
-        <ul className="hidden md:flex space-x-12 text-white">
+        <ul className="hidden md:flex space-x-6 md:space-x-10 text-white">
           <li>
             <a href="#hero" className="navlink">
               Home

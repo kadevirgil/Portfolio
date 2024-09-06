@@ -15,17 +15,21 @@ const Contact = () => {
         just want to say hi, I'll try my best to get back to you!
       </p>
       <div className="flex justify-center space-x-12">
-        <a href="mailto:kadevirgil@gmail.com" className="primary-btn">
-          Contact Me <FaMailBulk className="text-sky-400 inline-block ml-2" />
+        <a
+          href="mailto:kadevirgil@gmail.com"
+          className="primary-btn contact-btn hover:text-white text-sky-500"
+        >
+          Contact Me{" "}
+          <FaMailBulk className="hidden md:inline ml-2" />
         </a>
         <a
           href={pdf}
           download="Kade Virgil Resume.pdf"
           target="_blank"
-          className="primary-btn"
+          className="primary-btn contact-btn hover:text-white text-sky-500"
         >
           Download Resume{" "}
-          <FaFileDownload className="text-sky-400 inline-block ml-2" />
+          <FaFileDownload className="hidden md:inline ml-2" />
         </a>
       </div>
     </section>
