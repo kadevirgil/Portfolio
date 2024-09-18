@@ -7,11 +7,6 @@ const Hero = () => {
       id="hero"
       className="h-screen flex flex-col items-center justify-center text-center bg-gradient-to-b from-gray-800 to-gray-900 cursor-default"
     >
-      {/* <img
-        src="https://avatar.iran.liara.run/public/42"
-        className="w-32 md:w-48 lg:w-52 my-5 black hover:animate-spin transition-all"
-        alt="Kade"
-      /> */}
       <h1 className="text-4xl md:text-6xl font-bold text-white">
         Hi, I'm <span className="text-accent">Kade Virgil</span>
       </h1>

@@ -7,7 +7,7 @@ const Education = () => {
       school: "Weber State University",
       major: "B.S. in Computer Science",
       graduation: "Expected Graduation: Fall 2024",
-      gpa: "GPA: 3.59/4.00",
+      gpa: "GPA: N/A",
       coursework: [
         "Data Structures & Algorithms",
         "Objects & Design",
