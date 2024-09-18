@@ -4,9 +4,9 @@ import { FaUserCircle } from "react-icons/fa";
 
 const About = () => {
   return (
-    <section id="about" className="container block mx-auto px-6">
+    <section id="about" className="container mx-auto px-6">
       <h2 className="text-3xl font-bold text-white mb-6">About Me</h2>
-      <div className="flex flex-col md:flex-row items-center mb-8 slide-in">
+      <div className="flex flex-col md:flex-row items-center mb-8">
         <FaUserCircle className="w-32 h-32 md:w-48 md:h-48 rounded-full mb-6 md:mb-0 md:mr-8"/>
         <p className="text-lg text-gray-400">
           I'm a Fullstack Developer with a passion for creating efficient and

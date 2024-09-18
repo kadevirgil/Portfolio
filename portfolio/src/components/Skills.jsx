@@ -45,13 +45,13 @@ const skills = [
 
 const Skills = () => {
   return (
-    <section id="skills" className="container block mx-auto px-6">
+    <section id="skills" className="container mx-auto px-6">
       <h2 className="text-3xl font-bold text-white mb-6">Skills</h2>
       <ul className="grid grid-cols-2 md:grid-cols-3 gap-4">
         {skills.map((skill, index) => (
           <li
             key={index}
-            className="bg-gray-800 p-4 rounded-lg flex items-center space-x-3 hover:shadow-2xl hover:bg-slate-600 hover:scale-105 transition-all duration-200 slide-in"
+            className="bg-gray-800 p-4 rounded-lg flex items-center space-x-3 hover:shadow-2xl hover:bg-slate-600 hover:scale-105 transition-all duration-200"
           >
             <span>{skill.icon}</span>
             <span>{skill.name}</span>
