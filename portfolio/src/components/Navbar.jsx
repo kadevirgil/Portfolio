@@ -21,9 +21,9 @@ const Navbar = () => {
       y: 0,
       opacity: 1,
       transition: {
-        delay: 1 + i * 0.05, // 2 second initial delay + stagger
+        delay: 0.5 + i * 0.05, // 2 second initial delay + stagger
         type: "spring",
-        stiffness: 100,
+        stiffness: 80,
       },
     }),
   };
