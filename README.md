@@ -8,7 +8,7 @@ Below are projects I have worked on!
 > Click the link abaove to view the project!
 > Click the link below to view a copy of the code in github
 
-## [Code for Hair by Sarah](https://github.com/kadevirgil/Portfolio/tree/main/hair-by-sarah-copy)
+## [Code for Hair by Sarah](https://github.com/kadevirgil/test-portfolio/tree/main/hair-by-sarah%20-%20Copy)
 
 ![Hair by sarah demonstration gif](/gifs/hair-by-sarah.gif)
 
