@@ -2,6 +2,7 @@
 Hi, I am **Kade Virgil**, an undergraduate at **Weber State Univeristy** majoring in **Computer Science**
 
 View my Portfolio [here](https://kadevirgil.github.io/test-portfolio/)
+
 It was created with Vite + React JS, Tailwind CSS, and Framer Motion!
 
 ## Projects
