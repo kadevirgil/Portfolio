@@ -8,7 +8,7 @@ Below are projects I have worked on!
 > Click the link abaove to view the project!
 > Click the link below to view a copy of the code in github
 
-## [Code for Hair by Sarah](https://github.com/kadevirgil/test-portfolio/tree/main/hair-by-sarah%20-%20Copy)
+## [Code for Hair by Sarah](https://github.com/kadevirgil/test-portfolio/tree/main/projects/hair-by-sarah%20-%20Copy)
 
 ![Hair by sarah demonstration gif](/gifs/hair-by-sarah.gif)
 
@@ -22,7 +22,7 @@ to create a clean and professional UI.
 This webpage is incredibly responsive and looks great on all screen sizes!
 
 
-## [Banking Application](https://github.com/kadevirgil/Portfolio/tree/main/Banking-App)
+## [Banking Application](https://github.com/kadevirgil/test-portfolio/tree/main/projects/Banking-App)
 
 > [!NOTE]
 > Click the link above to view the code in GitHub!
@@ -61,7 +61,7 @@ Backend:
 ### Summary: 
 This project demonstrates my ability to design and implement a full-stack application with secure authentication, role-based access control, and a clean, user-friendly interface.
 
-## [Hangman Game](https://github.com/kadevirgil/Portfolio/tree/main/CS3750_Hangman_Game)
+## [Hangman Game](https://github.com/kadevirgil/test-portfolio/tree/main/projects/CS3750_Hangman_Game)
 
 > [!NOTE]
 > Click the link above to view the code in GitHub!
@@ -98,7 +98,7 @@ Collaboration and Code Management:
 ### Summary: 
 This project highlights my ability to work in a team, manage version control, and develop a complete, interactive web-based game with a focus on both functionality and user experience.
 
-## [Connect Four Game Development: React-Based Project](https://github.com/kadevirgil/Portfolio/tree/main/connect-4)
+## [Connect Four Game Development: React-Based Project](https://github.com/kadevirgil/test-portfolio/tree/main/projects/connect-4)
 
 > [!NOTE]
 > Click the link above to view the code in GitHub!
