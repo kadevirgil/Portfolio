@@ -1,0 +1,46 @@
+#highscores {
+    width: 75%;
+    font-family: Arial, Helvetica, sans-serif;
+    border-spacing: 0;
+}
+
+#highscores td, #highscores th {
+    border: 1px solid black; 
+    padding: 8px;
+}
+
+#highscores tr {
+    background-color: #ddd;
+    color: black;
+}
+
+#highscores th {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    text-align: left; 
+    background-color: #04aa6d;
+}
+
+#highscores-container {
+    background-color: slategray;
+    padding: 1rem 2rem; 
+    align-items: center;
+    border-radius: 12px;
+    width: 75%; 
+    margin: auto; 
+    
+}
+
+button {
+    padding: 1rem; 
+    border-radius: 6px;
+    border-color: #ddd;
+    box-shadow: 2px 2px rgba(179, 179, 179, 0.547);
+    margin: 1rem;
+}
+
+button:hover {
+    background-color: #ddd;
+    box-shadow: 6px 6px rgba(85, 85, 85, 0.571);
+    transition: 0.3s;
+}
