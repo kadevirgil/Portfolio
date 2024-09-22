@@ -2,7 +2,9 @@
 
 Welcome! I’m **Kade Virgil**, currently pursuing a **B.S. in Computer Science** at **Weber State University**.
 
-You can explore my portfolio [here](https://kadevirgil.github.io/test-portfolio/), where you'll find a collection of projects built using **Vite + React JS**, **Tailwind CSS**, and **Framer Motion**.
+You can explore my portfolio [here](https://kadevirgil.github.io/test-portfolio/), where you'll find a collection of projects built!
+
+This portofolio was created using Vite + React JS, Tailwind, and Framer Motion
 
 ## Featured Projects
 
