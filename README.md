@@ -1,5 +1,10 @@
 # Welcome to my Portfolio
 Hi, I am **Kade Virgil**, an undergraduate at **Weber State Univeristy** majoring in **Computer Science**
+
+# Please visit the link [here](https://kadevirgil.github.io/test-portfolio/) to see my portfolio!
+
+Down below is a review of my project I have worked on not including this portfolio
+
 ## Projects
 Below are projects I have worked on!
 
