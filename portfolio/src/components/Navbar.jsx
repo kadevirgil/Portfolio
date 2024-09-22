@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { FaGithub, FaLinkedin, FaFileDownload } from "react-icons/fa";
-import pdf from "../assets/kade-virgil-resume.pdf";
+import pdf from "../assets/Kade-Virgil-Resume.pdf";
 import { motion } from "framer-motion";
 
 const Navbar = () => {
@@ -38,6 +38,7 @@ const Navbar = () => {
         <ul className="hidden md:flex space-x-6 md:space-x-10 text-white">
           {[
             { href: "#hero", label: "Home" },
+            { href: "#education", label: "Education" },
             { href: "#about", label: "About" },
             { href: "#projects", label: "Projects" },
             { href: "#skills", label: "Skills" },
@@ -78,7 +79,7 @@ const Navbar = () => {
             animate="visible"
           >
             <a
-              href="https://github.com/kadevirgil/Portfolio"
+              href="https://github.com/kadevirgil/portfolio"
               className="navlink-logo"
               target="_blank"
             >

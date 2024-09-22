@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 const Contact = () => {
   return (
-    <section id="contact" className="container mx-auto py-10 px-6 text-center">
+    <section id="contact" className="container mx-auto py-10 px-6 text-center scroll-mt-24">
       <h2 className="text-3xl font-bold text-white mb-6">Get In Touch</h2>
       <p className="text-lg text-gray-400 mb-6">
         I'm currently open to new opportunities. Whether you have a question or

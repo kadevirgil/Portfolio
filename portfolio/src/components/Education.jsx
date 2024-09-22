@@ -1,6 +1,8 @@
 import React from "react";
 import wsu from "../assets/wsu-claw.png";
 
+// TODO: Add education inView animation
+
 const Education = () => {
   const degrees = [
     {
@@ -63,7 +65,7 @@ const Education = () => {
   ];
 
   return (
-    <section className="container mx-auto px-6">
+    <section id="education" className="container mx-auto px-6 scroll-mt-24">
       <h2 className="text-3xl font-bold text-white mb-6">Education</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {degrees.map((degree, index) => (

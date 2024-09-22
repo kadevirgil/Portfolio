@@ -3,17 +3,19 @@ import React, { useRef } from "react";
 import { FaUserCircle } from "react-icons/fa";
 import { motion, useInView } from "framer-motion";
 
+// TODO: Need to animate About Section 
+
 const About = () => {
   const h2Ref = useRef(null);
   const pRef = useRef(null); 
-  const isH2InView = useInView(h2Ref, { once: true, margin: "-100px" });
-  const isPInView = useInView(pRef, { once: true, margin: "-50px" });
+  const isH2InView = useInView(h2Ref, { once: true });
+  const isPInView = useInView(pRef, { once: true });
   
 
   return (
     <section
       id="about"
-      className="container mx-auto px-6 overflow-scroll scroll-m-24"
+      className="container mx-auto px-6 overflow-hidden scroll-mt-24"
     >
       <motion.h2
         ref={h2Ref}

@@ -19,7 +19,7 @@ html {
     @apply hover:text-sky-400 transition duration-300 active:text-sky-700;
   }
   .navlink {
-    @apply hover:text-sky-400 transition duration-300;
+    @apply transition duration-300 active:text-gray-400;
   }
   .navlink {
     position: relative;

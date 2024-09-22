@@ -43,9 +43,11 @@ const skills = [
   // Add more skills as needed
 ];
 
+// TODO: Add skills section inView animation
+
 const Skills = () => {
   return (
-    <section id="skills" className="container mx-auto px-6">
+    <section id="skills" className="container mx-auto px-6 scroll-mt-24">
       <h2 className="text-3xl font-bold text-white mb-6">Skills</h2>
       <ul className="grid grid-cols-2 md:grid-cols-3 gap-4">
         {skills.map((skill, index) => (
