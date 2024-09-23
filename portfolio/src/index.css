@@ -12,14 +12,14 @@ html {
 
 @layer components {
   .primary-btn {
-    @apply mt-6 px-6 py-3 text-lg text-white rounded-lg bg-slate-800 active:border-sky-700 active:bg-sky-700;
+    @apply mt-6 px-6 py-3 text-lg text-white rounded-lg bg-slate-800;
   }
 
   .navlink-logo {
     @apply hover:text-sky-400 transition duration-300 active:text-sky-700;
   }
   .navlink {
-    @apply transition duration-300 active:text-gray-400;
+    @apply transition duration-300 hover:text-sky-400 active:text-sky-700;
   }
   .navlink {
     position: relative;
@@ -36,6 +36,10 @@ html {
     left: 0;
     background-color: rgb(56 189 248); /* You can customize the color */
     transition: width 0.2s ease-in-out;
+  }
+
+  .navlink:active::after {
+    background-color: #0369a1;
   }
 
   .navlink:hover::after {

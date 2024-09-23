@@ -5,7 +5,9 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
   const desc_text =
-    "I'm a Full Stack Developer specializing in building exceptional web applications.".split(" ");
+    "I'm a Full Stack Developer specializing in building exceptional web applications.".split(
+      " "
+    );
 
   const textVariants = {
     hidden: { y: 10, opacity: 0 },
@@ -34,9 +36,9 @@ const Hero = () => {
         Hi, I'm Kade
         <span className="text-sky-400 text-6xl md:text-8xl pl-1">.</span>
       </motion.h1>
-      
+
       <p className="mt-4 text-lg md:text-xl text-gray-400">
-        {desc_text.map((item, i) => (
+        {desc_text.map((word, i) => (
           <motion.span
             variants={textVariants}
             initial="hidden"
@@ -44,12 +46,12 @@ const Hero = () => {
             key={i}
             custom={i}
             className={
-              item == "Full" || item == "Stack" || item == "Developer"
+              word == "Full" || word == "Stack" || word == "Developer"
                 ? "text-sky-400 md:text-3xl inline-block pr-2"
                 : "text-xl md:text-3xl inline-block pr-2"
             }
           >
-            {item}
+            {word}
           </motion.span>
         ))}
       </p>
@@ -59,13 +61,20 @@ const Hero = () => {
         transition={{ delay: 0.8, type: "spring" }}
       >
         <motion.a
-          href="mailto:kadevirgil@gmail.com"
+          href="ailto:kadevirgil@gmail.com"
           className="primary-btn flex items-center"
+          initial={{ border: "1px solid black" }}
           whileHover={{
-            boxShadow: "inset 6px 6px 24px 24px rgb(3 105 161)",
-            scale: 1.2,
+            boxShadow: "-10px 10px black",
+            border: "2px solid black",
+            scale: 1.025,
           }}
-          whileTap={{ scale: 0.9 }}
+          whileTap={{ boxShadow: "0px 0px black", scale: 1 }}
+          transition={{
+            ease: "backInOut",
+            type: "spring",
+            damping: 15,
+          }}
         >
           Contact Me
           <span className="text-sky-400 pl-2">--&gt;</span>

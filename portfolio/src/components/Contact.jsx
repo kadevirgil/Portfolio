@@ -18,9 +18,9 @@ const Contact = () => {
           className="primary-btn hover:text-white text-sky-500"
           whileHover={{
             boxShadow: "inset 6px 6px 24px 24px rgb(3 105 161)",
-            scale: 1.2
+            scale: 1.025
           }}
-          whileTap={{ scale: 0.9 }}
+          whileTap={{ scale: 0.95}}
         >
           Contact Me <FaMailBulk className="hidden md:inline ml-2" />
         </motion.a>
@@ -31,9 +31,9 @@ const Contact = () => {
           className="primary-btn hover:text-white text-sky-500"
           whileHover={{
             boxShadow: "inset 6px 6px 24px 24px rgb(3 105 161)",
-            scale: 1.2,
+            scale: 1.025,
           }}
-          whileTap={{ scale: 0.9 }}
+          whileTap={{ scale: 0.95 }}
         >
           Download Resume <FaFileDownload className="hidden md:inline ml-2" />
         </motion.a>

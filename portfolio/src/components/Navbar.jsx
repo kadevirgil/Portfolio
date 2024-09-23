@@ -37,9 +37,8 @@ const Navbar = () => {
       <nav className="container mx-auto flex justify-around items-center">
         <ul className="hidden md:flex space-x-6 md:space-x-10 text-white">
           {[
-            { href: "#hero", label: "Home" },
-            { href: "#education", label: "Education" },
             { href: "#about", label: "About" },
+            { href: "#education", label: "Education" },
             { href: "#projects", label: "Projects" },
             { href: "#skills", label: "Skills" },
             { href: "#contact", label: "Contact" },
