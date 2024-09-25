@@ -66,7 +66,6 @@ const Hero = () => {
           initial={{ border: "1px solid black" }}
           whileHover={{
             boxShadow: "-10px 10px black",
-            border: "2px solid black",
             scale: 1.025,
           }}
           whileTap={{ boxShadow: "0px 0px black", scale: 1 }}

@@ -2,6 +2,9 @@
 import React from "react";
 import hair from "../assets/hair-by-sarah.gif";
 import bank from "../assets/banking-app.gif";
+import BlogPostCarousel from "./BlogPostCarousel";
+
+import { motion } from "framer-motion";
 
 // TODO: Add projects on inView animations and Create a fun gallery/collage animation
 
@@ -18,77 +21,51 @@ const projects = [
   {
     title: "Banking Application",
     description:
-      "A full-stack banking application using React, Node.js, Express, and MongoDB.",
+      "A full-stack banking application using React, Node.js, Express, and MongoDB. Includes user authentication and account management.",
     image: bank,
     link: "https://github.com/kadevirgil/Portfolio/tree/main/Banking-App",
-    skills: [
-      "React",
-      "Node.js",
-      "Express",
-      "MongoDB",
-      "Bootstrap",
-      "React-Bootstrap",
-    ],
+    skills: ["MERN Stack", "Bootstrap", "React-Bootstrap"],
   },
-  // Add more projects as needed
+  {
+    title: "Weather Dashboard",
+    description:
+      "A weather dashboard application that provides current weather information and forecasts using the OpenWeatherMap API.",
+    image: "https://via.placeholder.com/150",
+    link: "https://github.com/yourusername/weather-dashboard",
+    live: "https://weatherdashboard.netlify.app/",
+    skills: ["React", "API", "CSS"],
+  },
+  {
+    title: "E-commerce Store",
+    description:
+      "An e-commerce store built with React and Redux for state management, featuring a shopping cart and product listings.",
+    image: "https://via.placeholder.com/150",
+    link: "https://github.com/yourusername/e-commerce-store",
+    live: "https://ecommercestore.netlify.app/",
+    skills: ["React", "Redux", "CSS"],
+  },
+  {
+    title: "Task Manager",
+    description:
+      "A task management application to keep track of daily tasks, built with React and Firebase for real-time updates.",
+    image: "https://via.placeholder.com/150",
+    link: "https://github.com/yourusername/task-manager",
+    live: "https://taskmanager.netlify.app/",
+    skills: ["React", "Firebase", "CSS"],
+  },
 ];
 
 const Projects = () => {
   return (
-    <section id="projects" className="container mx-auto p-6 scroll-mt-24">
-      <h2 className="text-3xl font-bold text-white mb-6">Projects</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {projects.map((project, projectIndex) => (
-          <div
-            key={projectIndex}
-            className="bg-gray-800 rounded-lg shadow-lg p-6 hover:shadow-2xl transition duration-300"
-          >
-            <h3 className="text-xl font-bold text-white mb-4">
-              {project.title}
-            </h3>
-            <a
-              href={project.live ? project.live : project.link}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src={project.image}
-                alt={project.title}
-                className="w-full h-64 object-contain mb-2"
-              />
-            </a>
-            <p className="text-gray-400 mb-4">{project.description}</p>
-
-            {/* Skills List */}
-            <ul className="flex flex-wrap mb-4">
-              {project.skills &&
-                project.skills.map((skill, skillIndex) => (
-                  <li
-                    key={`${projectIndex}-${skillIndex}`}
-                    className="bg-opacity-50 bg-sky-900 text-sky-400 px-4 py-2 mr-2 mb-2 rounded-3xl font-serif hover:bg-opacity-90 transition-all duration-200"
-                  >
-                    {skill}
-                  </li>
-                ))}
-            </ul>
-
-            <a href={project.link} className="navlink mr-4" target="_blank">
-              View Project
-            </a>
-            {project.live && (
-              <a
-                href={project.live}
-                className="navlink"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Live App
-              </a>
-            )}
-          </div>
-        ))}
-      </div>
-    </section>
+    <motion.section
+      id="projects"
+      initial={{ y: 50, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      transition={{ ease: "easeInOut", duration: 0.75, once: true, type: "spring" }}
+      className="container mx-auto px-3 scroll-mt-24"
+    >
+      <BlogPostCarousel posts={projects} />
+    </motion.section>
   );
 };
 

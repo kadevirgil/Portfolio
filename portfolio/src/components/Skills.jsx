@@ -1,5 +1,6 @@
 // src/components/Skills.jsx
 import React from "react";
+import { motion } from "framer-motion";
 import {
   JavascriptOriginal,
   ReactOriginal,
@@ -47,7 +48,14 @@ const skills = [
 
 const Skills = () => {
   return (
-    <section id="skills" className="container mx-auto px-6 scroll-mt-24">
+    <motion.section
+      initial={{ y: 48, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      transition={{ ease: "easeInOut", duration: 0.75 }}
+      viewport={{ once: true }}
+      id="skills"
+      className="container mx-auto px-6 scroll-mt-24"
+    >
       <h2 className="text-3xl font-bold text-white mb-6">Skills</h2>
       <ul className="grid grid-cols-2 md:grid-cols-3 gap-4">
         {skills.map((skill, index) => (
@@ -60,7 +68,7 @@ const Skills = () => {
           </li>
         ))}
       </ul>
-    </section>
+    </motion.section>
   );
 };
 
