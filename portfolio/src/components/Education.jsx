@@ -65,19 +65,19 @@ const Education = () => {
   ];
 
   return (
-    <section id="education" className="container mx-auto px-6 scroll-mt-24">
-      <h2 className="text-3xl font-bold text-white mb-6">Education</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <section id="education" className="container mx-auto scroll-mt-24 px-6">
+      <h2 className="mb-6 text-3xl font-bold text-white">Education</h2>
+      <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
         {degrees.map((degree, index) => (
           <div
             key={index}
-            className="bg-gray-800 rounded-lg shadow-lg p-6 hover:shadow-2xl transition duration-300"
+            className="rounded-lg bg-gray-800 p-6 shadow-lg transition duration-300 hover:shadow-2xl"
           >
             <h4 className="ed-heading mb-2">
               <img
                 src={wsu}
                 alt={`${degree.school} Claw Logo`}
-                className="wsu-img inline-block mr-2"
+                className="wsu-img mr-2 inline-block"
               />
               <span className="text-indigo-500">{degree.school}</span>{" "}
               {degree.location}
@@ -89,13 +89,13 @@ const Education = () => {
               <br />
               <span className="text-gray-300">{degree.gpa}</span>
             </p>
-            <p className="text-gray-400 mt-4">Coursework:</p>
+            <p className="mt-4 text-gray-400">Coursework:</p>
             <ul className="flex flex-wrap">
               {degree.coursework &&
                 degree.coursework.map((coursework, courseworkIndex) => (
                   <li
                     key={`${coursework}-${courseworkIndex}`}
-                    className="bg-opacity-50 bg-indigo-900 text-indigo-400 px-4 py-2 mr-2 my-2 rounded-3xl font-serif hover:bg-opacity-90 transition-all duration-200"
+                    className="my-2 mr-2 rounded-3xl bg-indigo-900 bg-opacity-50 px-4 py-2 font-serif text-indigo-400 transition-all duration-200 hover:bg-opacity-90"
                   >
                     {coursework}
                   </li>

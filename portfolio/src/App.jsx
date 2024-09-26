@@ -11,7 +11,7 @@ import Footer from "./components/Footer";
 
 const App = () => {
   return (
-    <div className="bg-gray-900 text-gray-300 font-sans scroll-smooth">
+    <div className="scroll-smooth bg-gray-900 font-sans text-gray-300">
       <Navbar />
       <main>
         <Hero />

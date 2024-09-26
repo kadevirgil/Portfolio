@@ -1,12 +1,11 @@
 // src/components/Projects.jsx
 import React from "react";
+// Import gifs for projects
 import hair from "../assets/hair-by-sarah.gif";
 import bank from "../assets/banking-app.gif";
-import BlogPostCarousel from "./BlogPostCarousel";
-
+// Import motion for view animations
 import { motion } from "framer-motion";
-
-// TODO: Add projects on inView animations and Create a fun gallery/collage animation
+import ProjectsCarousel from "./ProjectsCarousel";
 
 const projects = [
   {
@@ -61,10 +60,15 @@ const Projects = () => {
       id="projects"
       initial={{ y: 50, opacity: 0 }}
       whileInView={{ y: 0, opacity: 1 }}
-      transition={{ ease: "easeInOut", duration: 0.75, once: true, type: "spring" }}
-      className="container mx-auto px-3 scroll-mt-24"
+      transition={{
+        ease: "easeInOut",
+        duration: 0.75,
+        once: true,
+        type: "spring",
+      }}
+      className="container mx-auto scroll-mt-24 px-3"
     >
-      <BlogPostCarousel posts={projects} />
+      <ProjectsCarousel projects={projects} />
     </motion.section>
   );
 };

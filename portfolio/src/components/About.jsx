@@ -19,24 +19,24 @@ const About = () => {
   };
 
   return (
-    <section id="about" className="container mx-auto px-6 scroll-mt-24">
+    <section id="about" className="container mx-auto scroll-mt-24 px-6">
       <motion.h2
         ref={h2Ref}
         variants={variant}
         initial="hidden"
         animate={isH2InView ? "visible" : ""}
-        className="text-3xl font-bold text-white mb-6"
+        className="mb-6 text-3xl font-bold text-white"
       >
         About Me
       </motion.h2>
-      <div className="flex flex-col md:flex-row items-center mb-8">
+      <div className="mb-8 flex flex-col items-center md:flex-row">
         <motion.div
           ref={imgRef}
           variants={variant}
           initial="hidden"
           animate={isImgInView ? "visible" : ""}
         >
-          <FaUserCircle className="w-32 h-32 md:w-48 md:h-48 mb-6 md:mb-0 md:mr-8" />
+          <FaUserCircle className="mb-6 h-32 w-32 md:mb-0 md:mr-8 md:h-48 md:w-48" />
         </motion.div>
         <motion.p
           ref={pRef}

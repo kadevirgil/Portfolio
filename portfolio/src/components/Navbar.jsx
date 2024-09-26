@@ -30,12 +30,12 @@ const Navbar = () => {
 
   return (
     <header
-      className={`fixed w-full p-4 bg-gray-800 ${
+      className={`fixed w-full bg-gray-800 p-4 ${
         isScrolled ? "bg-opacity-90 shadow-lg" : "bg-opacity-0"
-      } transition-all duration-300 z-50`}
+      } z-50 transition-all duration-300`}
     >
-      <nav className="container mx-auto flex justify-around items-center">
-        <ul className="hidden md:flex space-x-6 md:space-x-10 text-white">
+      <nav className="container mx-auto flex items-center justify-around">
+        <ul className="hidden space-x-6 text-white md:flex md:space-x-10">
           {[
             { href: "#about", label: "About" },
             { href: "#education", label: "Education" },
@@ -67,7 +67,7 @@ const Navbar = () => {
               className="navlink-logo"
               target="_blank"
             >
-              <FaLinkedin className="w-8 h-8" />
+              <FaLinkedin className="h-8 w-8" />
             </a>
           </motion.li>
 
@@ -82,7 +82,7 @@ const Navbar = () => {
               className="navlink-logo"
               target="_blank"
             >
-              <FaGithub className="w-8 h-8" />
+              <FaGithub className="h-8 w-8" />
             </a>
           </motion.li>
 
@@ -96,7 +96,7 @@ const Navbar = () => {
             target="_blank"
           >
             <li className="nav-btn">
-              Resume <FaFileDownload className="w-6 inline mb-1" />
+              Resume <FaFileDownload className="mb-1 inline w-6" />
             </li>
           </motion.a>
         </ul>
