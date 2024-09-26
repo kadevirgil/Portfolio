@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
 import useMeasure from "react-use-measure";
+import { SectionHeader } from "../../util/SectionHeader";
+
+import { Reveal } from "../../util/Reveal";
 
 const CARD_WIDTH = 400;
 const MARGIN = 20;
@@ -39,14 +42,13 @@ const ProjectsCarousel = ({ projects }) => {
   };
 
   return (
-    <section className="py-8 flex justify-center" ref={ref}>
-      <div className="relative overflow-hidden p-4 w-full">
-        <div className="mx-auto">
-          <div className="flex items-center justify-between">
-            <h2 className="text-3xl font-bold text-white mb-6">Projects</h2>
-            <div className="flex items-center gap-1">
+    <section className="flex justify-center pb-8" ref={ref}>
+      <div className="relative w-full overflow-hidden">
+        <Reveal>
+          <div className="mx-auto">
+            <div className="mb-4 flex gap-1 pt-4">
               <button
-                className={`rounded-lg border-1 border-sky-800 bg-gray-950 text-sky-400 hover:bg-gray-800 transition-all duration-200 p-1.5 text-2xl ${
+                className={`rounded-lg bg-gray-950 p-1.5 text-4xl text-sky-400 transition-all duration-200 hover:bg-gray-800 active:scale-90 ${
                   CAN_SHIFT_LEFT ? "" : "opacity-30"
                 }`}
                 disabled={!CAN_SHIFT_LEFT}
@@ -55,7 +57,7 @@ const ProjectsCarousel = ({ projects }) => {
                 <FiArrowLeft />
               </button>
               <button
-                className={`rounded-lg border-1 border-sky-800 bg-gray-950 text-sky-400 hover:bg-gray-800 transition-all duration-200 p-1.5 text-2xl ${
+                className={`rounded-lg bg-gray-950 p-1.5 text-4xl text-sky-400 transition-all duration-200 hover:bg-gray-800 active:scale-90 ${
                   CAN_SHIFT_RIGHT ? "" : "opacity-30"
                 }`}
                 disabled={!CAN_SHIFT_RIGHT}
@@ -64,21 +66,21 @@ const ProjectsCarousel = ({ projects }) => {
                 <FiArrowRight />
               </button>
             </div>
+            <motion.div
+              animate={{
+                x: offset,
+              }}
+              transition={{
+                ease: "easeInOut",
+              }}
+              className="flex"
+            >
+              {projects.map((project, index) => {
+                return <Project key={index} {...project} />;
+              })}
+            </motion.div>
           </div>
-          <motion.div
-            animate={{
-              x: offset,
-            }}
-            transition={{
-              ease: "easeInOut",
-            }}
-            className="flex"
-          >
-            {projects.map((project, index) => {
-              return <Project key={index} {...project} />;
-            })}
-          </motion.div>
-        </div>
+        </Reveal>
       </div>
     </section>
   );
@@ -87,7 +89,7 @@ const ProjectsCarousel = ({ projects }) => {
 const Project = ({ image, title, description, link, live, skills }) => {
   return (
     <motion.div
-      className="relative shrink-0 cursor-pointer bg-slate-800 p-4 rounded-lg"
+      className="relative shrink-0 cursor-pointer rounded-lg bg-slate-800 p-4"
       // Add hover effect to project cards
       whileHover={{ y: -10 }}
       transition={{ type: "spring", stiffness: 250 }}
@@ -104,9 +106,9 @@ const Project = ({ image, title, description, link, live, skills }) => {
       <h4 className="relative z-10 mb-4 w-full text-3xl font-bold text-slate-50">
         {title}
       </h4>
-      <p className="relative z-10 text-slate-400 mb-4">{description}</p>
-      <div className="relative z-10 flex flex-wrap justify-start text-sky-500">
-        {skills.join(" - ")}
+      <p className="relative z-10 mb-4 text-slate-400">{description}</p>
+      <div className="relative z-10 flex flex-wrap justify-start rounded-lg text-sky-300">
+        {skills.join(" / ")}
       </div>
       <div className="relative z-10 mt-4 flex space-x-4">
         <a href={link} target="_blank" rel="noreferrer" className="navlink">

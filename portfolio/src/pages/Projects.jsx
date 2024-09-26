@@ -5,7 +5,8 @@ import hair from "../assets/hair-by-sarah.gif";
 import bank from "../assets/banking-app.gif";
 // Import motion for view animations
 import { motion } from "framer-motion";
-import ProjectsCarousel from "./ProjectsCarousel";
+import ProjectsCarousel from "../components/projects/ProjectsCarousel";
+import { SectionHeader } from "../util/SectionHeader";
 
 const projects = [
   {
@@ -56,20 +57,13 @@ const projects = [
 
 const Projects = () => {
   return (
-    <motion.section
+    <section
       id="projects"
-      initial={{ y: 50, opacity: 0 }}
-      whileInView={{ y: 0, opacity: 1 }}
-      transition={{
-        ease: "easeInOut",
-        duration: 0.75,
-        once: true,
-        type: "spring",
-      }}
-      className="container mx-auto scroll-mt-24 px-3"
+      className="container mx-auto scroll-mt-24 pt-6 px-6"
     >
+      <SectionHeader title="PROJECTS" dir="l" className="pt-6"/>
       <ProjectsCarousel projects={projects} />
-    </motion.section>
+    </section>
   );
 };
 

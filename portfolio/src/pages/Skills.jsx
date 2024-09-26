@@ -21,11 +21,12 @@ import {
   VitejsOriginal,
   BootstrapOriginal,
 } from "devicons-react";
+import { SectionHeader } from "../util/SectionHeader";
 
 const skills = [
   { name: "JavaScript", icon: <JavascriptOriginal size={35} /> },
   { name: "React", icon: <ReactOriginal size={35} /> },
-  { name: "Nodejs", icon: <NodejsOriginal size={35} /> },
+  { name: "Node.js", icon: <NodejsOriginal size={35} /> },
   { name: "Express", icon: <ExpressOriginal size={35} /> },
   { name: "MongoDB", icon: <MongodbOriginal size={35} /> },
   { name: "Python", icon: <PythonOriginal size={35} /> },
@@ -56,8 +57,8 @@ const Skills = () => {
       id="skills"
       className="container mx-auto scroll-mt-24 px-6"
     >
-      <h2 className="mb-6 text-3xl font-bold text-white">Skills</h2>
-      <ul className="grid grid-cols-2 gap-4 md:grid-cols-3">
+      <SectionHeader title="SKILLS" dir="r" />
+      <ul className="grid grid-cols-2 gap-4 pt-5 md:grid-cols-3">
         {skills.map((skill, index) => (
           <li
             key={index}
