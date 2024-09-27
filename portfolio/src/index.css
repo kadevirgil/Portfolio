@@ -38,10 +38,6 @@ html {
     transition: width 0.2s ease-in-out;
   }
 
-  .navlink:active::after {
-    background-color: #0369a1;
-  }
-
   .navlink:hover::after {
     width: 100%;
   }
