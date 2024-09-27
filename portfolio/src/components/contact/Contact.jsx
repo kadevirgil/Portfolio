@@ -3,11 +3,11 @@ import Reveal from "../../common/Reveal";
 
 const Contact = () => {
   return (
-    <section className="px-8 py-12" id="contact">
+    <section className="py-12" id="contact">
       <div className="mx-auto max-w-xl rounded-xl bg-gray-800 px-8 py-12">
         <Reveal width="w-full">
           <h4 className="text-center text-4xl font-black md:text-5xl">
-            Contact<span className="text-sky-500">.</span>
+            CONTACT<span className="text-sky-500">.</span>
           </h4>
         </Reveal>
         <Reveal width="w-full">

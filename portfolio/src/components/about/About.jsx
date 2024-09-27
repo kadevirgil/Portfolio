@@ -7,17 +7,17 @@ import { AiFillCode } from "react-icons/ai";
 
 const About = () => {
   return (
-    <section id="about" className="container mx-auto scroll-mt-24 px-6 pt-2">
+    <section id="about" className="container mx-auto scroll-mt-24 pt-2">
       <SectionHeader title="ABOUT" dir="l" />
       <div className="mb-8 flex flex-col items-center md:flex-row">
-        <div className="mb-6 mt-2 md:mb-0 md:mr-8">
+        <div className="mb-6 mt-2 block md:mb-0 md:mr-8 md:hidden">
           <Reveal>
-            <FaUserCircle className="h-32 w-32 md:h-48 md:w-48" />
+            <img src="https://avatar.iran.liara.run/public/42" className="h-32 w-32 md:h-48 md:w-48" />
           </Reveal>
         </div>
-        <div className="grid grid-cols-1 gap-8 text-lg text-gray-400 md:grid-cols-2 md:text-xl">
+        <div className="my-2 grid grid-cols-1 gap-8 text-lg text-gray-400 md:grid-cols-2 md:text-xl">
           <Reveal>
-            <p>
+            <p className="text-2xl">
               I'm a Fullstack Developer with a passion for creating efficient
               and scalable web applications. With a solid foundation in both
               front-end and back-end technologies, I love bringing ideas to life
@@ -34,7 +34,7 @@ const About = () => {
                 {tech.map((course, index) => (
                   <span
                     key={index}
-                    className="text-sm rounded-lg bg-sky-900 bg-opacity-50 px-2 py-1 text-sky-400"
+                    className="rounded-lg bg-sky-900 bg-opacity-50 px-2 py-1 text-sm text-sky-400"
                   >
                     {course}
                   </span>

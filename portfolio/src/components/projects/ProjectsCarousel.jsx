@@ -1,10 +1,15 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
+import {
+  FiArrowLeft,
+  FiArrowRight,
+  FiGithub,
+  FiExternalLink,
+} from "react-icons/fi";
 import useMeasure from "react-use-measure";
 import { Reveal } from "../../common/Reveal";
 
-const CARD_WIDTH = 400;
+const CARD_WIDTH = 350;
 const MARGIN = 20;
 const CARD_SIZE = CARD_WIDTH + MARGIN;
 
@@ -87,7 +92,7 @@ const ProjectsCarousel = ({ projects }) => {
 const Project = ({ image, title, description, link, live, skills }) => {
   return (
     <motion.div
-      className="relative shrink-0 cursor-pointer rounded-lg bg-slate-800 p-4"
+      className="relative shrink-0 rounded-lg bg-slate-800 p-4"
       style={{
         width: CARD_WIDTH,
         marginRight: MARGIN,
@@ -98,22 +103,33 @@ const Project = ({ image, title, description, link, live, skills }) => {
         className="mb-3 h-[200px] w-full rounded-lg object-cover"
         alt={`Image for my ${title} project`}
       />
-      <h4 className="relative z-10 mb-4 w-full text-3xl font-bold text-slate-50">
-        {title}
-      </h4>
-      <p className="relative z-10 mb-4 text-slate-400">{description}</p>
-      <div className="relative z-10 flex flex-wrap justify-start rounded-lg text-sky-400">
-        {skills.join(" - ")}
-      </div>
-      <div className="relative z-10 mt-4 flex space-x-4">
-        <a href={link} target="_blank" rel="noreferrer" className="navlink">
-          Source Code
+      <h4 className="relative z-10 text-xl font-bold text-slate-50">{title}</h4>
+      <div className="flex w-full items-center gap-2">
+        <div className="h-[1px] w-full bg-zinc-600" />
+        <a
+          target="_blank"
+          rel="nofollow"
+          href={link}
+          className="relative z-10 cursor-pointer text-slate-500 transition-colors hover:text-sky-300"
+        >
+          <FiGithub className="inline size-5" />
         </a>
         {live && (
-          <a href={live} target="_blank" rel="noreferrer" className="navlink">
-            Live Demo
+          <a
+            target="_blank"
+            rel="nofollow"
+            href={live}
+            className="relative z-10 cursor-pointer text-slate-500 transition-colors hover:text-sky-300"
+          >
+            <FiExternalLink className="inline size-6" />
           </a>
         )}
+      </div>
+      <div className="h-24 my-2">
+        <p className="text-pretty text-slate-300">{description}</p>
+      </div>
+      <div className="relative z-10 flex flex-wrap justify-start rounded-lg text-sky-400">
+        {skills.join(" - ")}
       </div>
     </motion.div>
   );

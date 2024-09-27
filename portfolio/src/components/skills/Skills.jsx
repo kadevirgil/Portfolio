@@ -34,7 +34,7 @@ const Skills = () => {
     transition={{ ease: "easeInOut", duration: 0.75 }}
     viewport={{ once: true }}
     id="skills"
-    className="container mx-auto scroll-mt-24 px-6"
+    className="container mx-auto scroll-mt-24"
     >
       <SectionHeader title="SKILLS" dir="r" />
       <ul className="grid grid-cols-2 gap-4 pt-5 md:grid-cols-3">
@@ -43,8 +43,8 @@ const Skills = () => {
           key={index}
           className="flex items-center space-x-3 rounded-lg bg-gray-800 p-4 transition-all duration-200 hover:scale-105 hover:bg-slate-600 hover:shadow-2xl"
           >
-            <span>{skill.icon}</span>
-            <span>{skill.name}</span>
+            <svg className="size-6 md:size-8">{skill.icon}</svg>
+            <span className="text-sm md:text-md">{skill.name}</span>
           </li>
         ))}
       </ul>
@@ -53,24 +53,24 @@ const Skills = () => {
 };
 
 const skills = [
-  { name: "JavaScript", icon: <JavascriptOriginal size={35} /> },
-  { name: "React", icon: <ReactOriginal size={35} /> },
-  { name: "Node.js", icon: <NodejsOriginal size={35} /> },
-  { name: "Express", icon: <ExpressOriginal size={35} /> },
-  { name: "MongoDB", icon: <MongodbOriginal size={35} /> },
-  { name: "Python", icon: <PythonOriginal size={35} /> },
-  { name: "Django", icon: <DjangoPlain size={35} /> },
-  { name: "HTML5", icon: <Html5Original size={35} /> },
-  { name: "CSS3", icon: <Css3Original size={35} /> },
-  { name: "SQLite", icon: <SqliteOriginal size={35} /> },
-  { name: "Tailwind CSS", icon: <TailwindcssOriginal size={35} /> },
-  { name: "React-Bootstrap", icon: <ReactbootstrapOriginal size={35} /> },
-  { name: "Bootstrap", icon: <BootstrapOriginal size={35} /> },
-  { name: "C++", icon: <CplusplusOriginal size={35} /> },
-  { name: "MySQL", icon: <MysqlOriginal size={35} /> },
-  { name: "C#", icon: <CsharpOriginal size={35} /> },
-  { name: "Git", icon: <GitOriginal size={35} /> },
-  { name: "Vite", icon: <VitejsOriginal size={35} /> },
+  { name: "JavaScript", icon: <JavascriptOriginal /> },
+  { name: "React", icon: <ReactOriginal /> },
+  { name: "Node.js", icon: <NodejsOriginal /> },
+  { name: "Express", icon: <ExpressOriginal /> },
+  { name: "MongoDB", icon: <MongodbOriginal /> },
+  { name: "Python", icon: <PythonOriginal /> },
+  { name: "Django", icon: <DjangoPlain /> },
+  { name: "HTML5", icon: <Html5Original /> },
+  { name: "CSS3", icon: <Css3Original /> },
+  { name: "SQLite", icon: <SqliteOriginal /> },
+  { name: "Tailwind CSS", icon: <TailwindcssOriginal /> },
+  { name: "React-Bootstrap", icon: <ReactbootstrapOriginal /> },
+  { name: "Bootstrap", icon: <BootstrapOriginal /> },
+  { name: "C++", icon: <CplusplusOriginal /> },
+  { name: "MySQL", icon: <MysqlOriginal /> },
+  { name: "C#", icon: <CsharpOriginal /> },
+  { name: "Git", icon: <GitOriginal /> },
+  { name: "Vite", icon: <VitejsOriginal /> },
   // Add more skills as needed
 ];
 export default Skills;

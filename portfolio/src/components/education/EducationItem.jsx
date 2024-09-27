@@ -11,15 +11,15 @@ export const EducationItem = ({
 }) => {
   return (
     <div className="mb-6 border-b border-zinc-700 pb-6 last:border-b-0 last:pb-0">
-      <div className="mb-2 flex items-center justify-between">
+      <div className="mb-2 block md:flex items-center justify-between">
         <Reveal>
-          <span className="text-2xl font-bold">{level}</span>
+          <span className="text-md md:text-2xl font-bold">{level}</span>
         </Reveal>
         <Reveal>
           <span>{graduationDate}</span>
         </Reveal>
       </div>
-      <div className="mb-2 flex items-center justify-between">
+      <div className="text-sm md:text-md mb-2 block md:flex items-center justify-between">
         <Reveal>
           <span className="text-sky-300">{major}</span>
         </Reveal>
@@ -40,7 +40,7 @@ export const EducationItem = ({
           {coursework.map((course, index) => (
             <span
               key={index}
-              className="rounded-lg bg-sky-900 bg-opacity-50 px-2 py-1 text-sky-400"
+              className="rounded-lg text-sm md:text-md bg-sky-900 bg-opacity-50 px-2 py-1 text-sky-400"
             >
               {course}
             </span>

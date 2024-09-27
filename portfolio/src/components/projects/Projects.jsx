@@ -8,7 +8,7 @@ import { SectionHeader } from "../../common/SectionHeader";
 
 const Projects = () => {
   return (
-    <section id="projects" className="container mx-auto scroll-mt-24 px-6 pt-6">
+    <section id="projects" className="container mx-auto scroll-mt-24 pt-6">
       <SectionHeader title="PROJECTS" dir="l" className="pt-6" />
       <ProjectsCarousel projects={projects} />
     </section>
@@ -23,16 +23,16 @@ const projects = [
     description:
       "React web application using Bootstrap for a hair styling website. With a responsive design and user-friendly interface.",
     image: hair,
-    link: "https://github.com/kadevirgil/Portfolio/tree/main/hair-by-sarah-copy",
+    link: "https://github.com/kadevirgil/portfolio/tree/main/projects/hair-by-sarah%20-%20Copy",
     live: "https://hairbysarah.netlify.app/",
     skills: ["React", "React-Bootstrap", "Bootstrap"],
   },
   {
     title: "Banking Application",
     description:
-      "A full-stack banking application using React, Node.js, Express, and MongoDB. Includes user authentication and account management.",
+      "A full-stack banking application using the MERN stack. Includes user authentication and account management.",
     image: bank,
-    link: "https://github.com/kadevirgil/Portfolio/tree/main/Banking-App",
+    link: "https://github.com/kadevirgil/portfolio/tree/main/Banking-App",
     skills: ["MERN", "Bootstrap", "React-Bootstrap"],
   },
   {

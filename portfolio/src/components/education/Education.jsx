@@ -5,7 +5,7 @@ import { EducationItem } from "./EducationItem";
 // TODO: Add education inView animation
 const Education = () => {
   return (
-    <section id="education" className="container mx-auto scroll-mt-24 px-6">
+    <section id="education" className="container mx-auto scroll-mt-24">
       <SectionHeader title="EDUCATION" dir="r" />
       {degrees.map((degree, index) => (
         <EducationItem
