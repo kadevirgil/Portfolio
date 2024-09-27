@@ -1,13 +1,13 @@
 // src/App.jsx
 import React, { useState } from "react";
-import Navbar from "./pages/Navbar";
-import Hero from "./pages/Hero";
-import About from "./pages/About";
-import Education from "./pages/Education";
-import Projects from "./pages/Projects";
-import Skills from "./pages/Skills";
-import Contact from "./pages/Contact";
-import Footer from "./pages/Footer";
+import Navbar from "./components/navbar/Navbar";
+import Hero from "./components/hero/Hero";
+import About from "./components/about/About";
+import Education from "./components/education/Education";
+import Projects from "./components/projects/Projects";
+import Skills from "./components/skills/Skills";
+import Contact from "./components/contact/Contact"
+import Footer from "./components/footer/Footer";
 
 const App = () => {
   return (
@@ -20,7 +20,6 @@ const App = () => {
         <Projects />
         <Skills />
         <Contact />
-        <Footer />
       </main>
     </div>
   );

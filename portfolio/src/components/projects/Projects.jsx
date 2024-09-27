@@ -1,12 +1,21 @@
 // src/components/Projects.jsx
 import React from "react";
 // Import gifs for projects
-import hair from "../assets/hair-by-sarah.gif";
-import bank from "../assets/banking-app.gif";
-// Import motion for view animations
-import { motion } from "framer-motion";
-import ProjectsCarousel from "../components/projects/ProjectsCarousel";
-import { SectionHeader } from "../util/SectionHeader";
+import hair from "../../assets/hair-by-sarah.gif";
+import bank from "../../assets/banking-app.gif";
+import ProjectsCarousel from "./ProjectsCarousel";
+import { SectionHeader } from "../../common/SectionHeader";
+
+const Projects = () => {
+  return (
+    <section id="projects" className="container mx-auto scroll-mt-24 px-6 pt-6">
+      <SectionHeader title="PROJECTS" dir="l" className="pt-6" />
+      <ProjectsCarousel projects={projects} />
+    </section>
+  );
+};
+
+// TODO: Add connect-4 and hangman to projects array
 
 const projects = [
   {
@@ -24,7 +33,7 @@ const projects = [
       "A full-stack banking application using React, Node.js, Express, and MongoDB. Includes user authentication and account management.",
     image: bank,
     link: "https://github.com/kadevirgil/Portfolio/tree/main/Banking-App",
-    skills: ["MERN Stack", "Bootstrap", "React-Bootstrap"],
+    skills: ["MERN", "Bootstrap", "React-Bootstrap"],
   },
   {
     title: "Weather Dashboard",
@@ -54,17 +63,5 @@ const projects = [
     skills: ["React", "Firebase", "CSS"],
   },
 ];
-
-const Projects = () => {
-  return (
-    <section
-      id="projects"
-      className="container mx-auto scroll-mt-24 pt-6 px-6"
-    >
-      <SectionHeader title="PROJECTS" dir="l" className="pt-6"/>
-      <ProjectsCarousel projects={projects} />
-    </section>
-  );
-};
 
 export default Projects;

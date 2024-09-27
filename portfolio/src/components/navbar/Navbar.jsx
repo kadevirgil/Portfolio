@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { FaGithub, FaLinkedin, FaFileDownload } from "react-icons/fa";
-import pdf from "../assets/Kade-Virgil-Resume.pdf";
+import pdf from "../../assets/Kade-Virgil-Resume.pdf";
 import { motion } from "framer-motion";
+import OutlineButton from "../../common/OutlineButton";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -67,7 +68,7 @@ const Navbar = () => {
               className="navlink-logo"
               target="_blank"
             >
-              <FaLinkedin className="h-8 w-8" />
+              <FaLinkedin className="size-8" />
             </a>
           </motion.li>
 
@@ -82,7 +83,7 @@ const Navbar = () => {
               className="navlink-logo"
               target="_blank"
             >
-              <FaGithub className="h-8 w-8" />
+              <FaGithub className="size-8" />
             </a>
           </motion.li>
 
@@ -92,12 +93,14 @@ const Navbar = () => {
             initial="hidden"
             animate="visible"
             href={pdf}
-            download="Kade Virgil Resume.pdf"
             target="_blank"
+            onClick={() => {
+              window.open(pdf);
+            }}
           >
-            <li className="nav-btn">
-              Resume <FaFileDownload className="mb-1 inline w-6" />
-            </li>
+            <OutlineButton className="border-sky-500 text-sky-500 hover:text-slate-800 before:bg-sky-500">
+              My Resume
+            </OutlineButton>
           </motion.a>
         </ul>
       </nav>

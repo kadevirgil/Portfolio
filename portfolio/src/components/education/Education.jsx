@@ -1,7 +1,6 @@
 import React from "react";
-import wsu from "../assets/wsu-claw.png";
-import { SectionHeader } from "../util/SectionHeader";
-import { EducationItem } from "../components/education/EducationItem";
+import { SectionHeader } from "../../common/SectionHeader";
+import { EducationItem } from "./EducationItem";
 
 // TODO: Add education inView animation
 const Education = () => {
@@ -12,6 +11,7 @@ const Education = () => {
         <EducationItem
           key={index}
           school={degree.school}
+          level={degree.level}
           major={degree.major}
           graduationDate={degree.graduation}
           gpa={degree.gpa}
@@ -22,29 +22,31 @@ const Education = () => {
   );
 };
 
-// TODO: Clean up the data (remove placeholder gpa, coursework, etc.)
 // Education data
 const degrees = [
   {
     school: "Weber State University",
-    major: "B.S. in Computer Science",
-    graduation: "Fall 2024",
-    gpa: "GPA: N/A",
+    level: "Bachelor of Science",
+    major: "Computer Science",
+    graduation: "December 2024",
+    gpa: "GPA: 3.62",
     coursework: [
-      "Data Structures & Algorithms",
-      "Objects & Design",
-      "Computer Organization & Programming",
-      "Object-Oriented Programming",
-      "Calculus",
-      ".NET Frameworks",
       "Operating Systems",
+      "Advanced Database Programming",
+      "Scripting Languages",
+      "Server-Side Web Architecture",
+      "Advanced Software Engineering",
+      "Data Science Algorithms",
+      "Formal Languages & Algorithms",
+      "Advanced Calculus",
     ],
   },
   {
     school: "Weber State University",
-    major: "A.A.S. in Computer Science",
+    level: "Associate of Applied Science",
+    major: "Computer Science",
     graduation: "December 2023",
-    gpa: "GPA: 3.59/4.00",
+    gpa: "GPA: 3.58",
     coursework: [
       "Data Structures & Algorithms",
       "Objects & Design",
@@ -52,14 +54,19 @@ const degrees = [
       "Combinatorics",
       "Object-Oriented Programming",
       "Calculus",
-      "Computer Architecture",
+      "Computer Architecture & Organization",
+      "Intro to Database Design & SQL",
+      "Client Side Web Development",
+      "Network Fundamentals & Design",
+      "Computational Structures",
+      "Software Engineering",
     ],
   },
   {
     school: "Weber State University",
-    major: "Certificate of Proficiency in Programming Essentials",
+    level: "Certificate of Proficiency",
+    major: "Programming Essentials",
     graduation: "December 2023",
-    gpa: "GPA: N/A",
     coursework: [
       "Core programming courses",
       "Data Structures & Algorithms",
@@ -70,9 +77,10 @@ const degrees = [
   },
   {
     school: "Weber State University",
-    major: "A.S. in General Studies",
+    level: "Associate of Science",
+    major: "General Studies",
     graduation: "April 2022",
-    gpa: "GPA: 3.59/4.00",
+    gpa: "GPA: 3.56",
     coursework: [
       "Mathematics",
       "History",
@@ -80,6 +88,10 @@ const degrees = [
       "Political Science",
       "Health",
       "Science",
+      "Anthropology",
+      "Geology",
+      "Astronomy",
+      "Communications",
     ],
   },
 ];

@@ -2,9 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
 import useMeasure from "react-use-measure";
-import { SectionHeader } from "../../util/SectionHeader";
-
-import { Reveal } from "../../util/Reveal";
+import { Reveal } from "../../common/Reveal";
 
 const CARD_WIDTH = 400;
 const MARGIN = 20;
@@ -90,9 +88,6 @@ const Project = ({ image, title, description, link, live, skills }) => {
   return (
     <motion.div
       className="relative shrink-0 cursor-pointer rounded-lg bg-slate-800 p-4"
-      // Add hover effect to project cards
-      whileHover={{ y: -10 }}
-      transition={{ type: "spring", stiffness: 250 }}
       style={{
         width: CARD_WIDTH,
         marginRight: MARGIN,
@@ -101,14 +96,14 @@ const Project = ({ image, title, description, link, live, skills }) => {
       <img
         src={image}
         className="mb-3 h-[200px] w-full rounded-lg object-cover"
-        alt={`An image for a fake blog post titled ${title}`}
+        alt={`Image for my ${title} project`}
       />
       <h4 className="relative z-10 mb-4 w-full text-3xl font-bold text-slate-50">
         {title}
       </h4>
       <p className="relative z-10 mb-4 text-slate-400">{description}</p>
-      <div className="relative z-10 flex flex-wrap justify-start rounded-lg text-sky-300">
-        {skills.join(" / ")}
+      <div className="relative z-10 flex flex-wrap justify-start rounded-lg text-sky-400">
+        {skills.join(" - ")}
       </div>
       <div className="relative z-10 mt-4 flex space-x-4">
         <a href={link} target="_blank" rel="noreferrer" className="navlink">
