@@ -1,5 +1,6 @@
 // src/components/Skills.jsx
 import React from "react";
+import { motion } from "framer-motion";
 import {
   JavascriptOriginal,
   ReactOriginal,
@@ -20,11 +21,12 @@ import {
   VitejsOriginal,
   BootstrapOriginal,
 } from "devicons-react";
+import { SectionHeader } from "../util/SectionHeader";
 
 const skills = [
   { name: "JavaScript", icon: <JavascriptOriginal size={35} /> },
   { name: "React", icon: <ReactOriginal size={35} /> },
-  { name: "Nodejs", icon: <NodejsOriginal size={35} /> },
+  { name: "Node.js", icon: <NodejsOriginal size={35} /> },
   { name: "Express", icon: <ExpressOriginal size={35} /> },
   { name: "MongoDB", icon: <MongodbOriginal size={35} /> },
   { name: "Python", icon: <PythonOriginal size={35} /> },
@@ -47,20 +49,27 @@ const skills = [
 
 const Skills = () => {
   return (
-    <section id="skills" className="container mx-auto px-6 scroll-mt-24">
-      <h2 className="text-3xl font-bold text-white mb-6">Skills</h2>
-      <ul className="grid grid-cols-2 md:grid-cols-3 gap-4">
+    <motion.section
+      initial={{ y: 48, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      transition={{ ease: "easeInOut", duration: 0.75 }}
+      viewport={{ once: true }}
+      id="skills"
+      className="container mx-auto scroll-mt-24 px-6"
+    >
+      <SectionHeader title="SKILLS" dir="r" />
+      <ul className="grid grid-cols-2 gap-4 pt-5 md:grid-cols-3">
         {skills.map((skill, index) => (
           <li
             key={index}
-            className="bg-gray-800 p-4 rounded-lg flex items-center space-x-3 hover:shadow-2xl hover:bg-slate-600 hover:scale-105 transition-all duration-200"
+            className="flex items-center space-x-3 rounded-lg bg-gray-800 p-4 transition-all duration-200 hover:scale-105 hover:bg-slate-600 hover:shadow-2xl"
           >
             <span>{skill.icon}</span>
             <span>{skill.name}</span>
           </li>
         ))}
       </ul>
-    </section>
+    </motion.section>
   );
 };
 
