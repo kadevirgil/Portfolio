@@ -32,7 +32,7 @@ const projects = [
     description:
       "A full-stack banking application using the MERN stack. Includes user authentication and account management.",
     image: bank,
-    link: "https://github.com/kadevirgil/portfolio/tree/main/Banking-App",
+    link: "https://github.com/kadevirgil/portfolio/tree/projects/Banking-App",
     skills: ["MERN", "Bootstrap", "React-Bootstrap"],
   },
   {

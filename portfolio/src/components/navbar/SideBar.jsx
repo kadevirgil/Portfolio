@@ -32,7 +32,7 @@ export const SideBar = () => {
       initial={{ x: -70 }}
       animate={{ x: 0 }}
       transition={{ duration: 1 }}
-      className={`no-scrollbar sticky selection:left-0 top-0 z-20 flex h-screen flex-col items-center py-0 my-0 bg-opacity-50 bg-gray-800 w-12 md:w-16`} 
+      className="no-scrollbar sticky selection:left-0 top-0 z-20 flex h-screen flex-col items-center py-0 my-0 bg-opacity-50 bg-gray-800 w-12 md:w-16"
     >
       <SideBarLink
         selected={currentViewSection}

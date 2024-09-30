@@ -45,7 +45,7 @@ const ProjectsCarousel = ({ projects }) => {
   };
 
   return (
-    <section className="flex justify-center pb-8" ref={ref}>
+    <section id="project-carousel" className="flex justify-center pb-8" ref={ref}>
       <div className="relative w-full overflow-hidden">
         <Reveal>
           <div className="mx-auto">
@@ -129,7 +129,7 @@ const Project = ({ image, title, description, link, live, skills }) => {
         <p className="text-pretty text-slate-300">{description}</p>
       </div>
       <div className="relative z-10 flex flex-wrap justify-start rounded-lg text-sky-400">
-        {skills.join(" - ")}
+        {skills.join(" / ")}
       </div>
     </motion.div>
   );

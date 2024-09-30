@@ -11,29 +11,17 @@ import Header from "./components/navbar/Header";
 
 const App = () => {
   return (
-    <div className="flex flex-col min-h-screen bg-gray-900 font-sans text-gray-300">
+    <div className="flex min-h-screen flex-col bg-gray-900 font-sans text-gray-300">
       <Header />
       <div className="flex flex-1">
         <SideBar />
-        <main className="flex-1 overflow-x-hidden items-center justify-center px-6 md:px-16">
-          <section className="hero-section">
-            <Hero />
-          </section>
-          <section className="about-section">
-            <About />
-          </section>
-          <section className="education-section">
-            <Education />
-          </section>
-          <section className="projects-section">
-            <Projects />
-          </section>
-          <section className="skills-section">
-            <Skills />
-          </section>
-          <section className="contact-section">
-            <Contact />
-          </section>
+        <main className="flex-1 items-center justify-center overflow-x-hidden px-6 md:px-16">
+          <Hero />
+          <About />
+          <Education />
+          <Projects />
+          <Skills />
+          <Contact />
         </main>
       </div>
     </div>
