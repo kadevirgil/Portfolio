@@ -1,8 +1,6 @@
 import React from "react";
 // Import OutlineButton component for displaying outline button
 import OutlineButton from "../../common/OutlineButton";
-// Import resume for displaying resume
-import resume from "../../assets/Kade-Virgil-Resume.pdf";
 // Icons for LinkedIn and GitHub
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 
@@ -15,7 +13,7 @@ export const Header = () => {
       <OutlineButton
         className="border-sky-500 text-sky-500 before:bg-sky-500 hover:text-slate-800"
         onClick={() => {
-          window.open(resume);
+          window.open("https://docs.google.com/document/d/1Gi3MuQArswhm6WfYMojbXh9t4uzCUQIE-VULCV_xjDU/edit?usp=sharing");
         }}
       >
         My Resume
