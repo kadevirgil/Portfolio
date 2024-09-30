@@ -1,5 +1,6 @@
 // src/App.jsx
 import React from "react";
+// Import components for the portfolio
 import Hero from "./components/hero/Hero";
 import About from "./components/about/About";
 import Education from "./components/education/Education";

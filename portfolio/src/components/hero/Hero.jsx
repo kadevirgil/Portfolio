@@ -1,9 +1,16 @@
 import React from "react";
+// Import Reveal & OutlineButton components for animating content & displaying buttons
 import Reveal from "../../common/Reveal";
 import OutlineButton from "../../common/OutlineButton";
-import { motion } from "framer-motion";
+// Import avatar image for displaying profile picture
 import avatar from "../../assets/avatar.png";
+// Import motion component for animating content
+import { motion } from "framer-motion";
 
+
+// DESCRIPTION: Hero component for displaying hero section
+// Contains a brief introduction about me and a button to 
+// scroll to the contact section of the page.
 const Hero = () => {
   return (
     <section className="overflow-hidden py-24 text-slate-100 md:py-32">

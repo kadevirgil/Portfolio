@@ -1,6 +1,14 @@
 import React from "react";
+// Import motion for animations
 import { motion } from "framer-motion";
 
+// DESCRIPTION: SideBarLink component for displaying each sidebar link
+// PROPS: setSelected, selected, children, href, value
+// setSelected: function to set the selected value
+// selected: current selected value
+// children: children of the component
+// href: href of the link
+// value: Text value of the link
 export const SideBarLink = ({
   setSelected,
   selected,

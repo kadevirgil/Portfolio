@@ -1,8 +1,13 @@
 import React from "react";
+// Import OutlineButton component for displaying outline button
 import OutlineButton from "../../common/OutlineButton";
+// Import resume for displaying resume
 import resume from "../../assets/Kade-Virgil-Resume.pdf";
+// Icons for LinkedIn and GitHub
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 
+// DESCRIPTION: Header component for displaying header
+// Contains links to GitHub and LinkedIn and button to view resume
 export const Header = () => {
   return (
     <header className="sticky top-0 z-20 flex h-[72px] items-center justify-between px-4 pl-14 md:pl-24 bg-opacity-50 backdrop-blur-md">

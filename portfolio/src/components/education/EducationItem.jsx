@@ -1,6 +1,15 @@
 import React from "react";
+// Import Reveal component for animating content
 import Reveal from "../../common/Reveal";
 
+// DESCRIPTION: EducationItem component for displaying each education item
+// PROPS: school, level, major, graduationDate, gpa, coursework
+// school: Name of the school
+// level: Degree level, ie: Bachelor of Science
+// major: Major of the degree
+// graduationDate: Date of graduation
+// gpa: GPA of the degree
+// coursework: Array of courses taken and skills learned
 export const EducationItem = ({
   school,
   level,

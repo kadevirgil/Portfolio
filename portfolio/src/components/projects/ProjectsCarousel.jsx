@@ -1,23 +1,33 @@
 import React, { useState } from "react";
+// Import motion for animations
 import { motion } from "framer-motion";
+// Icons from react-icons
 import {
   FiArrowLeft,
   FiArrowRight,
   FiGithub,
   FiExternalLink,
 } from "react-icons/fi";
+// Import useMeasure for measuring the width of the carousel
 import useMeasure from "react-use-measure";
+// Reveal component for animation revealing the carousel
 import { Reveal } from "../../common/Reveal";
 
-const CARD_WIDTH = 350;
-const MARGIN = 20;
+// Main constants for the carousel
+const CARD_WIDTH = 325;
+const MARGIN = 15;
 const CARD_SIZE = CARD_WIDTH + MARGIN;
-
+// Breakpoints for sizing the carousel
 const BREAKPOINTS = {
   sm: 640,
   lg: 1024,
 };
 
+
+// DESCRIPTION: ProjectsCarousel component for displaying the projects carousel
+// PROPS: projects,
+// projects: Array of project objects, loops through each project and displays
+//            using the Project component 
 const ProjectsCarousel = ({ projects }) => {
   const [ref, { width }] = useMeasure();
   const [offset, setOffset] = useState(0);
@@ -89,6 +99,14 @@ const ProjectsCarousel = ({ projects }) => {
   );
 };
 
+// DESCRIPTION: Project component for displaying a single project
+// PROPS: image, title, description, link, live, skills
+// image: Image source for the project
+// title: Title of the project
+// description: Description of the project
+// link: Link to the GitHub repository
+// live: Link to the live project, if applicable
+// skills: Array of skills used in the project
 const Project = ({ image, title, description, link, live, skills }) => {
   return (
     <motion.div
@@ -100,7 +118,7 @@ const Project = ({ image, title, description, link, live, skills }) => {
     >
       <img
         src={image}
-        className="mb-3 h-[200px] w-full rounded-lg object-cover"
+        className="mb-3 h-[200px] w-full rounded-lg object-fit"
         alt={`Image for my ${title} project`}
       />
       <h4 className="relative z-10 text-xl font-bold text-slate-50">{title}</h4>

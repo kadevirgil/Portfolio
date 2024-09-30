@@ -1,10 +1,12 @@
 import React from "react";
-import { FaUserCircle } from "react-icons/fa";
 // Import SectionHeader component
 import { SectionHeader } from "../../common/SectionHeader";
+// Import Reveal component for animations
 import Reveal from "../../common/Reveal";
 import { AiFillCode } from "react-icons/ai";
 
+// DESCRIPTION: About component for displaying about section
+// Contains information about me and the technologies I use for fun
 const About = () => {
   return (
     <section id="about" className="container mx-auto scroll-mt-24 pt-2">
@@ -17,7 +19,7 @@ const About = () => {
         </div>
         <div className="my-2 grid grid-cols-1 gap-8 text-lg text-gray-400 md:grid-cols-2 md:text-xl">
           <Reveal>
-            <p className="text-2xl">
+            <p className="text-lg md:text-xl">
               I'm a Fullstack Developer with a passion for creating efficient
               and scalable web applications. With a solid foundation in both
               front-end and back-end technologies, I love bringing ideas to life

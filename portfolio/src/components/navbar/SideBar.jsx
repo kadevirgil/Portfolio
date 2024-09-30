@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from "react";
+// Import motion for animations
 import { motion } from "framer-motion";
+// Import SideBarLink component for displaying each sidebar link
 import SideBarLink from "./SideBarLink";
 
+/// DESCRIPTION: SideBar component for displaying the sidebar
+// Handles the current view section and updates the selected link accordingly
 export const SideBar = () => {
   const [currentViewSection, setCurrentViewSection] = useState("");
 

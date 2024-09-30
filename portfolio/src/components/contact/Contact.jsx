@@ -1,6 +1,9 @@
 import { AiFillMail } from "react-icons/ai";
+// Import Reveal component for animations
 import Reveal from "../../common/Reveal";
 
+// DESCRIPTION: Contact component for displaying contact information
+// Contains email address and link to my LinkedIn
 const Contact = () => {
   return (
     <section className="py-12" id="contact">

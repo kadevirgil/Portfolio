@@ -1,8 +1,12 @@
 import React from "react";
+// Import SectionHeader component for displaying section header
 import { SectionHeader } from "../../common/SectionHeader";
+// Import EducationItem component for displaying each education item
 import { EducationItem } from "./EducationItem";
 
-// TODO: Add education inView animation
+// DESCRIPTION: Education component for displaying education section
+// Loops through each object in the degrees array and displays 
+// an EducationItem Component for each object
 const Education = () => {
   return (
     <section id="education" className="container mx-auto scroll-mt-24">
@@ -39,6 +43,8 @@ const degrees = [
       "Data Science Algorithms",
       "Formal Languages & Algorithms",
       "Advanced Calculus",
+      "MERN Stack Development",
+      "Full-Stack Web Development",
     ],
   },
   {
