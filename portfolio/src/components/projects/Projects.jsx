@@ -42,7 +42,7 @@ const projects = [
     description:
       "A hangman game built with the MERN stack. The game fetches random words from a database and stores highscores in a leaderboard.",
     image: hangman,
-    link: "https://github.com/yourusername/weather-dashboard",
+    link: "https://github.com/kadevirgil/portfolio/tree/main/projects/hangman-game",
     skills: ["React", "MongoDB", "Express", "Node.js"],
   },
   {
@@ -50,7 +50,7 @@ const projects = [
     description:
       "A connect-4 game built with React. The game allows two players to play against each other and determine a winner.",
     image: connect4,
-    link: "https://github.com/kadevirgil/portfolio/tree/main/projects/connect-4",
+    link: "https://github.com/kadevirgil/portfolio/tree/main/projects/connect-four",
     skills: ["React", "CSS"],
   },
 ];
